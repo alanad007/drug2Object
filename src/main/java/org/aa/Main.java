@@ -68,10 +68,11 @@ public class Main {
         /*
          * convert the held map to object
          */
-        finalMap.keySet().stream().collect(Collectors.toMap(key->key,key->{
+        //TODO CORRECT THIS CODE
+        /*finalMap.keySet().stream().collect(Collectors.toMap(key->key,key->{
             transform2Object(finalMap.get(key),getClass2Map(key));
         }));
-
+*/
 
 
 
@@ -131,13 +132,13 @@ public class Main {
 
     private static <T> List<T > transform2Object(List<Map<String, String>> maps, Class<T> classType) {
 
-        maps.stream().collect(Collectors.toList(m -> {
+       /* maps.stream().collect(Collectors.toList(m -> {
 
             ObjectMapper mapper = new ObjectMapper();
-            return mapper.convertValue(m,
-                    classType);
-        } ));
-
+            //return mapper.convertValue(m, classType);
+            return null;
+        } ));*/
+return null;
     }
 
     /**
@@ -169,7 +170,7 @@ public class Main {
 
     /**
      * List<List<String>> vals= keys.stream().map(key -> parseLine(getHeaderLine(key))).collect(Collectors.toList());
-     * @param headerMap
+     *
      * @param keys
      * @return
      */
